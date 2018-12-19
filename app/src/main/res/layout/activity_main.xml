@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yunk.sshsimpleterminal.MainActivity">
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="25dp"
+        android:text="connect" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_connect"
+        android:layout_toStartOf="@+id/iv_status"
+        android:text="Connection Status:" />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_send"
+        android:layout_alignTop="@+id/textView"
+        app:srcCompat="@android:drawable/presence_busy" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_connect"
+        android:layout_below="@+id/btn_connect"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="date" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/et_input"
+        android:layout_marginEnd="21dp"
+        android:text="send" />
+
+    <TextView
+        android:id="@+id/tv_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="700px"
+        android:layout_below="@+id/btn_send"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:background="@android:color/background_dark"
+        android:text="-----Start from here-----\n"
+        android:textColor="@android:color/background_light"
+        android:scrollbars="vertical"
+        android:gravity="bottom"/>
+</RelativeLayout>
